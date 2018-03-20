@@ -1,0 +1,43 @@
+1. Создаем виртуальное окружение в папке проекта
+python -m venv myvenv
+Запуск: myvenv\Scripts\activate
+
+2. Проверка версии pip
+pip install --upgrade pip
+
+3. Установка django
+python -m pip install django~=1.11.0
+
+4. Создадим типовой проект/сайт django
+django-admin.exe startproject mysite .
+
+5. Изменить настройки в mysite/settings.py
+TIME_ZONE = 'Europe/Moscow'
+LANGUAGE_CODE = 'ru-ru'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ALLOWED_HOSTS = ['127.0.0.1', '<твоё_имя_пользователя>.pythonanywhere.com']
+
+6. Создадим базу данных
+python manage.py migrate
+(вы должны быть в директории, где расположен файл manage.py)
+
+7. Запуск веб-сервера на http://127.0.0.1:8000/
+python manage.py runserver
+(не закрывать это окно, открыть параллельно ещё одно окно терминала и активировать myvenv\Scripts\activate)
+
+8. Создаем блог
+python manage.py startapp blog
+
+9. Изменить настройки в mysite/settings.py
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'blog',
+]
+
+10.
