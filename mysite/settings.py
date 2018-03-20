@@ -25,7 +25,7 @@ SECRET_KEY = '_tt!do-qn9n-03$s*@b_agc&z4s3f91p1%n6he-jy%h-xb15tf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'MariaR.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'maria1app.pythonanywhere.com']
 
 
 # Application definition
